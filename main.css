@@ -1,0 +1,377 @@
+/*
+Because I don't want to comment everything, I'll just put a summary of things
+I learned in regards to CSS here:
+
+margin is the space outside of the element
+padding is the space inside the element
+
+float:left is useful when objects are stacking when you want them to be side by side
+
+Width:100% is better for backgrounds since width:100vw leads to going out of bounds
+if there is a verticle scroll bar
+
+Height:100% doesn't work on an element without a parent because it could be infinitely
+tall
+
+when trying to center, try using margin:auto + display:flex on parent object
+or try align-items:center or text-align:center 
+
+for complicated centering, it's better to use multiple divs + flex/flexbox?
+
+I still have a ton of things I don't understand about css but again, for just 1 week
+of working time, not bad. I would recommend to properly study stuff now.
+
+Like learning more deeply about flex,flexbox,grid,tables etc
+12.10.2022 Joshua Ching
+*/
+
+body {
+    background: var(--main_background_color);
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    /*make hidden text un-selectable*/
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* make it so text is small and hidden*/
+}
+
+:root {
+    --card_width: 250px;
+    --card_border_radius: 16px;
+    --row_increment: 10px;
+    --card_small: 26;
+    --card_medium: 33;
+    --card_large: 45;
+    --main_background_color: #0E1116;
+}
+
+.card_small {
+    grid-row-end: span var(--card_small);
+    display: flex;
+    justify-content: center;
+}
+
+.card_medium {
+    grid-row-end: span var(--card_medium);
+    display: flex;
+    justify-content: center;
+}
+
+.card_large {
+    grid-row-end: span var(--card_large);
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    padding: 0px;
+    margin: 12px 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: darkgray;
+}
+
+.card_image {
+    width: 50%;
+    margin: auto;
+    display: block;
+}
+
+.heading-image {
+    width: 100%;
+    height: 500px;
+
+    background-position: 10% 30%;
+    background-size: cover;
+    background-image: url(https://lh3.googleusercontent.com/pw/AL9nZEXe66TXPElq9ehpN3cP1Ic31DweWVgnX_hFBhaPVkPTfOlxlKE_kqvq0ZJ521E7iGnWeZlwXoWZyJKb8b_Lc5o3taz7QJ_I_WjMJ8Gsn6u08nA7a1raXsY80Ly-Tp-fCUYfD3PyWDzMdakT_Zv25-r4vw=w1617-h1213-no);
+    background-attachment: fixed;
+
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /*make hidden text un-selectable*/
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* make it so text is small and hidden*/
+}
+
+#too-small {
+    width: 100%;
+}
+
+#screen-div {
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    position: fixed;
+    display: none;
+    z-index: 50;
+}
+
+#pop-up {
+    width: 90vw;
+    height: 90vh;
+
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 5%);
+
+    display: inline;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0;
+    margin: 0;
+    border: none;
+    top: 0px;
+
+    position: fixed;
+
+    z-index: 2;
+    background-color: rgb(69, 69, 69);
+
+    border-radius: 10px;
+
+}
+
+#too-tall {
+    width: 100%;
+    height: 130%;
+    margin-top: -60px;
+}
+
+#pop-up-text {
+    /* background-color: rebeccapurple; */
+    z-index: 3;
+    width: 80%;
+    height: 15%;
+    padding: 0;
+
+    margin-left: 10%;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    overflow-wrap: break-word;
+    overflow-y: hidden;
+    text-align: center;
+
+    color: white;
+
+}
+
+#pop-up-image {
+
+    width: 80%;
+    height: 75%;
+    margin-left: 10%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+
+    /* background-color: red; */
+    z-index: 3;
+
+    display: flex;
+}
+
+#main-image {
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#info-bar {
+
+    margin-top: 0px;
+
+    height: 175px;
+    width: 100%;
+
+    background-color: red;
+    z-index: 2;
+    /* background: var(--main_background_color); */
+}
+
+#info-bar-left {
+    /* background-color: green; */
+    background: var(--main_background_color);
+    height: 100%;
+    width: 65%;
+    float: left;
+    padding: auto;
+    z-index: 1;
+    position: relative;
+
+}
+
+.school-logo {
+    /* background-color: purple; */
+    background: var(--main_background_color);
+    width: 150px;
+    height: 120px;
+
+
+    background-image: url(https://lh3.googleusercontent.com/pw/AL9nZEUTsK_mlbtsXckL2HGvG3hEz5gMHDtBkuGaQd3HvxEsLNGYdCO2A9nFHgENhVfkJ8Xv5q_uixxTco7PFPcMZrR_BaQLHF2G653X8tb2mt1joHuZasKWpg1in_ae65p9LL21r1PRl-dHI3HEwZtITCnGiA=w200-h180-no);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    float: left;
+    margin-top: 25px;
+
+}
+
+#school-name {
+    color: white;
+
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 2vw;
+}
+
+#paragraph-holder {
+    /* background-color: blue; */
+    background: var(--main_background_color);
+    width: 35%;
+    height: 100%;
+    float: right;
+
+    display: flex;
+
+    align-items: center;
+
+    z-index: 1;
+    position: relative;
+}
+
+.paragraph-text {
+
+
+    text-align: center;
+    color: white;
+    word-wrap: break-word;
+
+
+    padding: 30px;
+
+    margin-bottom: 0px;
+    min-width: 10%;
+    font-size: 1.7vw;
+
+
+}
+
+
+
+.profile-picture {
+    /* background-color: blue; */
+    /* background: var(--main_background_color); */
+    width: 13vw;
+    height: 13vw;
+    max-width: 140px;
+    max-height: 140px;
+    margin: auto;
+
+    background-image: url(https://lh3.googleusercontent.com/RKGyGxv6rL825JFxDN4vhbEXaxBtoMxVE4m6um8iycpUoSTiExQVT2-3IWOYPJXzIlQFDijcPH5gwGUc_n8j-nfYUCAi4BeU88hvLZstRsUbbvIGOG8xcO549bLWOSzEYHAO-eKC_OdjRicRULc3GHXbkbIZHawZb0g3i43mRETEGqBRuhuFsc_r8af0ja7gMwUCvllyePzGM--63rDr3Fsg378Z_KHG3vAPT0m5bHOsUVdDPNqkslQgK2n_pG1vlWBXe9Y699fTXu67JlUAmuAPILqeRG-1wyehDBiqxTFHx8SKQojWzWUsGVcdivZXChd7mxlzlHaZKKmvWh9bmxIw2phnJrOzCzHfdrlFQ-yp9S2qnq4XaLiBy-bly97sj3yi6y_2H62iXwFpfS8yP7r-wYVzOMrfScwYGaYd9QsTFIVX22JFvGkJkfR7q9VtV9GfTppH6OO73X9IQ47o3u0c_Ap7YTsD5aiGuM-20xxDXTpR5bjCjtYIc0wGeRSqb4dClpVQBC6g308GuaEfcuGkRvf_0D0DgV7-cJK7m-9SxN-V6Q-L4FhuppzanDhOFCPJJRH5F4PI5Z4CGyfzYI4Uzj1XT1oj3Hr7RjeiTIhGmX4hxmam0PX5mTB_Avbdf1Qhukn3z2cl3Tgj6gACyrkPFedPzwfTbQ09OAzv3dZWyRW6B8v8U_FHpJnKKTaFvt3NdlvofXl5tMy54_GoWPOPmN4I207D4_4Taq5WzDKSgRhgijMqUFpAJn6RS5t0AGsNDl2DkUlsCj6_kTgXS4VG2r7btBHwIOVLeGv3gaqOB0goWfZnsU-U6ouItrnIjL51z3adL8N7unI9bCebI4lm6Ph6sdJCBR5VZO4VHUjT69tdwxWfgyWVr39U6oQ4KW7hZWY_g7nP0oZj65E0hzNyvYhJ8-ogZ8ULt-qZ6zZPVJ-A8WDhMnR-0CNrJfi1RJOE1eRCm17MRqgfs2U6E0qaou_XRiOTnKO5pcuMV0Mz_b9Zd6pY8ZrtNIxfI29ARU-K8A7AlpE4djau_qqmYhNJwiuUS8o4B7LZ-8k4UaEeTdcQV8-K5rXO46hBBc0iLnKIunwt0uqvp-9ycK2KWdpw3w-jeDo=s1129-no?authuser=2);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    margin-top: 20px;
+
+}
+
+.pin_container {
+    width: 75vw;
+    justify-content: center;
+    display: grid;
+
+    grid-template-columns: repeat(auto-fill, var(--card_width));
+    grid-auto-rows: var(--row_increment);
+
+    background: var(--main_background_color);
+
+    /*make hidden text un-selectable*/
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* make it so text is small and hidden*/
+    font-size: 0;
+
+    outline: 1px;
+    outline-style: solid;
+    outline-color: white;
+
+    z-index: 1;
+    position: relative;
+
+}
+
+#everything-holder {
+    /*this holds everything below white line
+    so side div and pin holder*/
+    display: flex;
+    background-color: purple;
+}
+
+#side-div {
+    width: 40%;
+    /* background-color: #BFD7FF; */
+
+    background: var(--main_background_color);
+    outline: 1px;
+    outline-style: solid;
+    outline-color: white;
+    z-index: 1;
+    position: relative;
+}
+
+
+
+#side-bar-credits {
+    word-wrap: break-word;
+    color: white;
+    padding: 10px 10px 0px 10px;
+    margin: 0;
+    font-size: 2vw;
+    text-align: center;
+}
+
+#side-bar-essay {
+    word-wrap: break-word;
+    color: white;
+
+
+    padding: 0px 20px;
+
+    font-size: min(1.5vw, 30px);
+}
+
+#side-bar-essay::first-letter {
+    font-size: 50px;
+    margin-right: -7px;
+}
+
+button {
+    border: none;
+    background: none;
+
+    color: white;
+    float: right;
+    border-radius: 5px;
+}

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Josh's Website</title>
+    <link href="main.css" rel="stylesheet" type="text/css" />
+    <!--
+        Like with the CSS I tried to put the JavaScript into its own file
+        but it creates a bunch of reference errors. Like the script connects
+        but it doesn't understand the old references... Maybe something to learn
+        another time.
+    -->
+</head>
+
+<!--
+    this line below makes it so right clicking does not work on the page
+    I didn't want people to be able to save the images shown in my portfolio easily
+-->
+<body oncontextmenu="return false;">
+
+
+    <!--
+        below is what the website looked like when I first started.
+        This was the first website I ever made and knew nothing
+        about web dev before this project.
+
+        not bad for my first ever website.
+    -->
+
+    <!-- <h1>Here is a big title test2</h1>
+    This is a <em>test</em>
+
+    <p>
+        here is a link <a href="http://www.youtube.com"> here</a>
+    </p>
+
+    <p>
+        And here is a picture
+        <br>
+        <img src="https://i.pinimg.com/564x/71/fa/81/71fa8137b64abcf50fdb124c21fd16fd.jpg">
+    </p> -->
+
+    <div class="heading-image">
+        <h1 style="position:fixed;z-index: 0"><br>Photography
+            Portfolio<br></h1>
+    </div>
+
+
+    <div id="info-bar">
+        <div id="info-bar-left">
+            <div class="school-logo">
+
+            </div>
+
+            <div style="display: table; height: 100%;overflow: hidden;">
+                <h3 id="school-name">Foothill College<br>Fall Quarter 2022</h3>
+            </div>
+
+        </div>
+
+        <div id="paragraph-holder">
+            <div class="paragraph-text">
+                Click an image to enlarge <br> Click again to close<br>or press esc
+            </div>
+        </div>
+    </div>
+    <!--
+        This is the declaration of the pop up that shows up when you click on an image
+    -->
+    <div id="screen-div">
+        <div id="pop-up">
+            <div id="pop-up-image">
+                <img id="main-image"
+                    src="https://www.planetware.com/wpimages/2020/03/best-hot-air-balloon-rides-cappadocia-turkey.jpg">
+            </div>
+
+            <div id="pop-up-text">
+                ;akljdsf;kljasdf;akljsdf;akljdfa;dskflja;dsklfja;sdkfja;sdkfja;sdkfja;dkfja;dslkjfa;lksjd;alkjsdf;akldsjfa;lksdfja;dsklfja;sdlfkja;sdlkfja;sdklfjads;lkfjads;fkljasdf;lkajdsf;alkdsjf;a
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+    <!--
+        everything-holder holds all the info below the info bar(section talking about school)
+        it has two seperate items. One is the left hand side which contains my essay.
+        the other is the pin_container on the right side
+
+        the pin_container the first thing I made and was from a tutorial. Not knowing what
+        I was coding came back to bite me. but because I needed to change some properties
+        about it, I think I learned a lot about css
+    -->
+    <div id="everything-holder">
+
+        <div id="side-div">
+
+            <div class="profile-picture">
+            </div>
+
+            <p id="side-bar-credits">Joshua Ching<br>-
+
+            <div style="white-space: pre-wrap;"id="side-bar-essay">Working in Photography 04 has been an absolute pleasure. This quarter I’ve come to learn more advanced photography concepts while also getting to further explore my creativity.
+
+I found it fascinating how shutter speed, F-stop, and ISO, values could be manipulated not just to improve the visual quality of an image, but to also completely change the whole feeling and story a photograph tells. Through careful study and practice in the field I now better understand in which situations each technique excels and am proud to show off my work this quarter. 
+
+While I was previously aware of concepts such as the rule of thirds and leading lines, it was refreshing to take a deeper dive into composition and learn about additional concepts like depth, framing, and contrast.
+
+One photo I’m particularly proud of in this regard is “Temple.” I think that using the leafs and tree in the foreground to frame the far off temple utilizes the techniques from our lectures well and helps to create a more dynamic image. Before this quarter, I certainly wouldn’t have been able to compose a shot like this.
+
+Moreover, in this course I’ve cultivated a deeper appreciation of the incredibly important role lighting plays in photography. I remember learning that the Greek roots of photography mean “drawing with light.” But I never realized just how true that was until starting work on my own photography projects. By making use of a very long shutter speed and low ISO I could literally draw in the air using light. I never thought I’d be able to draw in 3D as if in Virtual Reality, but thanks to the skills I’ve learned this quarter I can now remove the “Virtual” from that equation.
+
+This quarter I’ve learned and experienced so much more than I thought I would. And I feel incredibly lucky to have had the chance to work with Professor Jordahl who has been nothing but exceptional both in teaching and kindness. From the knowledge and experiences I’ve accumulated in this class, I no longer see the world a layman, but as a photographer. 
+            </div>
+            </p>
+        </div>
+
+        <div id="pin" class="pin_container">
+
+            <div class="card card_small">Beach Log - Pixel 6<br>
+                This photo was taken at Pillar Point and the technique of framing was used utilizing the mountain and interestingly shaped log
+                
+                <img class="card_img"
+                    src="https://lh3.googleusercontent.com/pw/AL9nZEUaE_SugcoshHVune6-LKx4OiSJk9fISJqdNl76Z9T5bdb_Oc1qXyr7LapJTOe1oi-g0p5IjxHklCJ91MDkD0p_vYL9k2N8LOQDPVfhuFKU79iEhq5wko8gwRyFu_imI3eDvusVomUF1QLvhsLpakZQEA=w1617-h1213-no">
+
+
+
+            </div>
+
+            <div class="card card_medium">Cupid - OLYMPUS OM-D E-M1 Mark II
+                This photo utilized the night photography technique of using a long shutter speed + low ISO + flashlight to “paint with light”
+                
+                <img class="card_img"
+                    src="https://lh3.googleusercontent.com/pw/AL9nZEXe0PgTrJ3pQhTYhTKt9V2iylPmiZZL0iNZq-VFu8yMVI6PDnSWovwg_34Ra5M902Hg7Ul6uzr9lpTKoDmognfHkk4SW8V7IkxWXCKZ2aekv_3Ro-rvMNNcWRt3KPJ86Mv-MviC2zZVhPUlFaNugPRtAg=w1535-h1023-no?authuser=0">
+                
+            </div>
+
+
+            <div class="card card_large">Temple - Pixel 6
+                This photo uses the surrounding leafs and tree in the foreground to frame the distant temple
+                
+
+                <img class="card_img"
+                    src="https://media.discordapp.net/attachments/713619926711009301/1049881313991204894/PXL_20221202_231349050.jpg?width=672&height=896">
+                
+            </div>
+
+            <div class="card card_small">Coding Crew - Pixel 6
+                This photo was taken of me and my team for CalHacks 9.0 a hackathon hosted by UCBerkley. This photo makes use of the surrounding environment to tell a story.
+                
+                <img style="height:100%; left:30px;position:relative" class="card_img"
+                    src="https://media.discordapp.net/attachments/713619926711009301/1049887900000600094/PXL_20221016_055146742.jpg?width=937&height=703">
+                
+            </div>
+
+
+            <div class="card card_medium">Flying Fish - Pixel 6
+                This photo was taken near Mavericks Beach and uses a long time exposure to get a very detailed photograph at dusk
+                
+                <img class="card_img"
+                    src="https://lh3.googleusercontent.com/pw/AL9nZEV1BvSoFdXDu1Sv_-1pdkL7cpp9hFt9REicx8D8KI8mbIavbh_E8nGFCvbPHmHF81vxYRakVQjmCujfSlh6fruIYkU4RmEqQdad-Msc0bvYmM8F8PLZXEJRaW93H_kwOGkRTtuPr8dGVxqh8czSyjVWjw=w1617-h1213-no">
+                
+            </div>
+
+            <div class="card card_large">Sunset Bench - Pixel 6
+                This photo was taken of my mother taking a rest during our beach Hike. This photo frames the sun in the upper left following the rule of thirds
+                
+                <img class="card_img"
+                    src="https://lh3.googleusercontent.com/pw/AL9nZEWex70XQnriZjflUG-VM0n2-NNiZleogezxGifBNYe6B58pdOruaj6kTp_ZopYcVXmpTSUPcjYQ6ogcg97aA2xeQ8NzsYqtrvLSxn-lgAfQ55dpqB2nmZ_uTev3oJJuzBjtXvlV_PRHuyLzyLBeVnFJQQ=w781-h1141-no?authuser=0">
+                
+            </div>
+
+            <div class="card card_small">Fallen Tree - Pixel 6
+                This photo was taken at Rancho Antonio Preserve and is an example of using sun beams to powerful feeling of nature
+                
+                <img class="card_img"
+                    src="https://media.discordapp.net/attachments/713619926711009301/1049881875344273408/PXL_20221202_223543538.jpg?width=1196&height=897">
+                
+            </div>
+
+            <div class="card card_medium">Light Painter - OLYMPUS OM-D E-M1 Mark II
+                This photo uses multiple techniques at once. During the long exposure my Father moved the light in total darkness. Once in position we used a flood light to light him up as well
+                
+                <img class="card_img"
+                    src="https://lh3.googleusercontent.com/pw/AL9nZEXxQEbrvIIXJcRKuoVOo9MasOL2NBQMxL8wPBMVq41M-gxF5rUzZD9zXspyGwVVBodRgVh6sYwv6GEG5BQAQLzro2pCSc8rss3Bl1pTuFmXvc9a_UVhJQEerNM3ye5LvC2hDM6r2dkC5aJx8KofETlpKQ=w1648-h1100-no">
+                
+            </div>
+
+            <div class="card card_large">Bridge - Pixel 6
+                This photo uses leading lines and the rule of thirds to make a fairly uninteresting subject more visually appealing 
+                
+                <img class="card_img"
+                    src="https://media.discordapp.net/attachments/713619926711009301/1049887504574189650/PXL_20221022_235006569.jpg?width=528&height=704">
+                
+            </div>
+
+            <div class="card card_medium">Sunset Clouds - Pixel 6
+                This was taken from my window at sunset. By taking advantage of natural lighting and the rule of thirds this came out to be a great photo
+                
+                <img class="card_img"
+                    src="https://media.discordapp.net/attachments/713619926711009301/1049886879539019786/PXL_20221118_010227233.jpg?width=937&height=703">
+                
+            </div>
+
+            <div class="card card_small">Mountain Gutter - Pixel 6
+                This photo is another display of natural lighting. This time demonstrating side lighting during golden hour
+                
+                <img class="card_img"
+                    src="https://lh3.googleusercontent.com/pw/AL9nZEXe66TXPElq9ehpN3cP1Ic31DweWVgnX_hFBhaPVkPTfOlxlKE_kqvq0ZJ521E7iGnWeZlwXoWZyJKb8b_Lc5o3taz7QJ_I_WjMJ8Gsn6u08nA7a1raXsY80Ly-Tp-fCUYfD3PyWDzMdakT_Zv25-r4vw=w1617-h1213-no">
+                
+            </div>
+
+            <div class="card card_medium">Forest - Pixel 6
+                This photo was taken while driving in the forest. (Don’t worry I was in the passengers seat haha) This photo is an example of using leading lines and symmetry 
+                
+                <img class="card_img" id="too-small"
+                    src="https://lh3.googleusercontent.com/pw/AL9nZEWaR3BgZbZoY5lYBegg3puYTUjgpt10ZNP5nxqAyBukyU4qXKfraroS_Mdo7jGd5IChoSOpJPMe5WBP1huFXNhuxNpkT263t4bpSvoIqByzQw4C1juWkr-pOf8tFjLwYQNleUvkzw5DzRyZNR9P56Uz-Q=w875-h1213-no">
+                
+            </div>
+
+            <div class="card card_large">Out of Time - Pixel 6
+                I was inspired for this photo when I noticed that my favorite wrist watch had died. This is an example of indoor lighting and contrast
+                
+                <img class="card_img"
+                    src="https://media.discordapp.net/attachments/713619926711009301/1049881173528154112/PXL_20221206_040439382.jpg?width=528&height=704">
+                
+            </div>
+
+            <div class="card card_medium">Telephone Wire - Pixel 6
+                I always found it interesting how birds gather on these wires and wanted to incorporate it in my photography project. This photo is and example of contrast and rule of thirds
+                
+                <img class="card_img" id="too-short"
+                    src="https://media.discordapp.net/attachments/713619926711009301/1049882349027995808/PXL_20221119_010243564.jpg?width=937&height=703">
+                
+            </div>
+
+            <div class="card card_small">The Squatter - Pixel 6
+                This photo is of my friend squatting to look at some ants. This photo uses rule of thirds, leading lines, and candid photography
+                
+                <img id="too-tall"class="card_img" 
+                    src="https://media.discordapp.net/attachments/713619926711009301/1049887282540318810/PXL_20221028_223149417.jpg?width=528&height=704">
+        
+            </div>
+
+            <div class="card card_small">Night Ocean - Pixel 6
+                This photo was taken at dusk of the Pillar Point Harbor. This photo is a combines night photography, symmetry and silhouette lighting
+                
+                <img class="card_img"
+                    src="https://media.discordapp.net/attachments/713619926711009301/1049882239003004938/PXL_20221119_012357808.jpg?width=937&height=703">
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+    <script>
+        //11.27.2022 we now have it working so image when clicked pops up box and changes image to the clicked image
+        //next we need to get it to also take a string (associated with the image? OOP? and update the div to display that text )
+        //also make pop up have nice open and close animation (can be done by editing open/closepopup())
+        //don't have pop up follow on scroll cause that's annoying. makes sense to have it close
+
+        //11.29.2022 tried dividing main div into two divs: one for the image, and one for the text. Now trying to
+        //get it so the image resized to fit within new div, but for some reason, when I try to set the image to say
+        //50% of it's div, instead, it just makes the div twice as big to make up. How is it doing this opposite effect??
+
+        //12.4.2022 wow omg I'm really suprised, actually got everything done! 
+        //So pop up is now set up. it's got picture set up to change on each click
+        //and also takes hidden text from pic div and puts it in popuptext div.
+        // Only lacking thing is that the image does not upscale to fill the image div atm
+        // maybe try putting in actual images and see if thats an issue.
+        // next step: put in actual images and make things look pretty...?
+
+
+        addEventListener(('scroll'), ClosePopUp);
+
+        //man it is weird that you need to give each element a unique name
+        //in order to reference them in script
+        var screenDiv = document.getElementById("screen-div");
+        var popUpDiv = document.getElementById("pop-up");
+        var popUpImageDiv = document.getElementById("pop-up-image");
+        var popUpTextDiv = document.getElementById("pop-up-text");
+        screenDiv.addEventListener('click', ClosePopUp);
+
+        document.onkeydown = function (e) {
+            if (e.key === "Escape") {
+                ClosePopUp();
+            }
+        }
+
+        for (let cardObject of document.getElementsByClassName("card_img")) {
+            console.log(cardObject);
+            cardObject.addEventListener('click', ClickHandler);
+            cardObject.addEventListener('mouseover', MouseOverHandler);
+            cardObject.addEventListener('mouseout', MouseOutHandler);
+        }
+
+        function ClickHandler() {
+            console.log("ran");
+            OpenPopUp(this.currentSrc, this.parentNode.textContent); 
+        }
+
+        const hoverSize = 10;
+        function MouseOverHandler() {
+
+            this.style.opacity = "0.7";
+        }
+
+        function MouseOutHandler() {
+            this.style.opacity = "1.5";
+        }
+
+        function ClosePopUp() {
+            screenDiv.style.display = "none";
+        }
+
+        function OpenPopUp(imgSrc, string) {
+            popUpImageDiv.getElementsByTagName("img")[0].src = imgSrc;
+            popUpImageDiv.getElementsByTagName("img")[0].style.maxHeight = "100%";
+            popUpImageDiv.getElementsByTagName("img")[0].style.Height = "100%";
+
+            popUpTextDiv.innerText = string;
+
+            screenDiv.style.display = "inline";
+        }
+
+    </script>
+</body>
+
+</html>
+<!--
+    12.10.2022 Joshua Ching
+-->
