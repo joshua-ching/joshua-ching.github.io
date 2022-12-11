@@ -202,7 +202,7 @@ img {
     height: 175px;
     width: 100%;
 
-    background-color: red;
+    /* background-color: red; */
     z-index: 2;
     /* background: var(--main_background_color); */
 }
